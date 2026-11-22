@@ -3,78 +3,98 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sobia Noor | Machine Learning &amp; Computer Science</title>
-  <meta name="description" content="Sobia Noor works on reliable machine learning under distribution shift, with a focus on medical imaging, and related work in cybersecurity, computer vision and NLP. Applying to PhD programs in Computer Science.">
+  <title>Sobia Noor | Machine learning that holds up when the data changes</title>
+  <meta name="description" content="Sobia Noor tests why machine learning models trained in one place fail in another, mostly on medical images and network traffic. Applying to PhD programs in computer science.">
+  <link rel="icon" href="assets/sobia.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="nav">
-    <a class="brand" href="index.html">Sobia Noor</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
-    <nav id="nav-links">
-      <a href="index.html#research" >Research</a>
-      <a href="projects.html">Projects</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="index.html#background">Background</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </header>
+<body data-page="home">
+  <main id="main">
+    <section class="hero wrap">
+      <div>
+        <h1>Machine learning that holds up when the data changes.</h1>
+        <p class="intro">I'm Sobia Noor, a software engineer and educator in Lahore. I test why models trained in one place fail in another, mostly on medical images and network traffic, and I'm applying to PhD programs in computer science.</p>
+        <p class="actions">
+          <a class="btn btn-solid" href="projects.html">See my projects</a>
+          <a class="btn" href="cv.html">View my CV</a>
+        </p>
+      </div>
+      <figure class="portrait">
+        <img src="assets/sobia.jpg" width="600" height="600" alt="Portrait of Sobia Noor in a dark blazer and white collar">
+      </figure>
+    </section>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">Computer Science · Applying to PhD programs</p>
-      <h1>Sobia Noor</h1>
-      <p class="lead">I work on making machine learning reliable when the data changes, for example when a model trained at one hospital is used at another. My main application area is medical imaging, with related work in cybersecurity, computer vision and NLP. I am a software engineer and educator based in Lahore, Pakistan.</p>
-      <div class="cta">
-        <a class="btn primary" href="projects.html">Browse projects by domain</a>
-        <a class="btn" href="timeline.html">See my path</a>
+    <section class="shift" aria-labelledby="shift-title">
+      <div class="wrap shift-grid">
+        <div>
+          <h2 id="shift-title">Why the data source matters</h2>
+          <p>A model learns from data that looks a certain way. Drag the slider to move a new hospital or network away from the one it trained on, and watch how much of the new data still looks familiar.</p>
+          <div class="control">
+            <label for="shift-range">Distance between the two data sources</label>
+            <input id="shift-range" type="range" min="0" max="6" step="0.05" value="0.2">
+          </div>
+          <p class="readout"><output id="shift-out" for="shift-range">100%</output><small>of the new data overlaps with the training data</small></p>
+          <p class="shift-note">This is an illustration, not my data. In my intrusion-detection study, a detector that scored an F1 of 0.96 on its own network scored 0.02 on another. <a href="projects.html#security">Read the study</a>.</p>
+        </div>
+        <div>
+          <svg id="shift-svg" class="shift-svg" viewBox="0 0 640 240" role="img" aria-label="Two bell curves, one for training data and one for new data, drifting apart as the slider moves"></svg>
+          <ul class="legend">
+            <li class="l-train"><i></i>Training data</li>
+            <li class="l-fresh"><i></i>New data</li>
+            <li class="l-both"><i></i>Where they overlap</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section id="research">
-      <h2>Research focus</h2>
-      <p class="muted">My guiding question is how to build machine learning models that stay trustworthy under distribution shift: a new hospital, a new network or a new data source. Medical imaging is my primary application area. Projects labelled <em>Research project</em> are built around a specific research question. Others are applied studies on public datasets.</p>
-      <div id="domain-grid" class="grid"></div>
+    <section id="research" class="wrap block">
+      <h2>What I work on</h2>
+      <p class="measure">My guiding question is how to build models that stay trustworthy when the data comes from somewhere new: a different hospital, a different network, a different source. Medical imaging is my main area. Security, vision and language work around it.</p>
+      <ul id="areas" class="index"></ul>
     </section>
 
-    <section id="featured">
-      <h2>Selected projects</h2>
-      <div id="featured-grid" class="grid"></div>
-      <p><a href="projects.html">All projects, grouped by research domain →</a></p>
+    <section id="work" class="wrap block">
+      <h2>Selected work</h2>
+      <p class="muted measure">Research projects first. The rest are team projects from hackathons.</p>
+      <div id="featured" class="works"></div>
+      <p style="margin-top:24px"><a class="btn btn-small" href="projects.html">All projects by domain</a></p>
     </section>
 
-    <section id="path">
+    <section id="path" class="wrap block">
       <h2>Recent path</h2>
-      <div id="recent-timeline" class="timeline"></div>
-      <p><a href="timeline.html">Full timeline →</a></p>
+      <ul id="recent" class="recent"></ul>
+      <p style="margin-top:24px"><a class="btn btn-small" href="timeline.html">Full timeline</a> <a class="btn btn-small" href="achievements.html">Certificates and competitions</a></p>
     </section>
 
-    <section id="background">
+    <section id="background" class="wrap block">
       <h2>Background</h2>
-      <h3>Education</h3>
-      <p>Bachelor of Information Technology, Institute of Southern Punjab, Multan (2018 – 2022), CGPA 3.21 / 4.00.</p>
-      <h3>Experience</h3>
-      <p>Data Scientist at Data Seekho (2024 – 2025). Trainer at iCodeGuru in IELTS, web development and data structures and algorithms (2025 – present), mentoring 100+ students.</p>
-      <h3>Skills</h3>
-      <dl id="skills" class="skills"></dl>
-      <h3>Achievements</h3>
-      <ul id="milestones" class="list"></ul>
+      <div class="two">
+        <div>
+          <h3>Education</h3>
+          <p>Bachelor of Information Technology, Institute of Southern Punjab, Multan, 2018 to 2022. CGPA 3.21 out of 4.00.</p>
+          <h3>Experience</h3>
+          <p>Data Scientist at Data Seekho, 2024 to 2025. Trainer at iCodeGuru, 2025 to now, teaching IELTS, web development, and data structures and algorithms to more than 100 students.</p>
+          <h3>Highlights</h3>
+          <ul id="milestones" class="plain"></ul>
+        </div>
+        <div>
+          <h3>Skills</h3>
+          <dl id="facts" class="facts"></dl>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>I am glad to talk about research collaborations, graduate programs and projects.</p>
-      <p class="cta">
-        <a class="btn primary" id="email-link" href="#">Email me</a>
-        <a class="btn" id="link-github" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" id="link-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" id="link-youtube" target="_blank" rel="noopener">YouTube</a>
-      </p>
+    <section id="contact" class="wrap block">
+      <h2>Get in touch</h2>
+      <p class="measure">I'm glad to talk about research collaborations, assistantships and graduate programs.</p>
+      <ul id="contact-list" class="contact-list"></ul>
     </section>
   </main>
 
-  <footer><p>© <span id="year"></span> Sobia Noor</p></footer>
-  <noscript><p style="text-align:center">This site needs JavaScript to display projects and the timeline.</p></noscript>
+  <noscript><p class="wrap">Projects, the timeline and the demo need JavaScript to display.</p></noscript>
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>

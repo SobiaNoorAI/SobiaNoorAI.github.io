@@ -12,8 +12,56 @@ window.SITE = {
   links: {
     github: "https://github.com/SobiaNoorAI",
     linkedin: "https://www.linkedin.com/in/sobianoorai/",
-    youtube: "https://www.youtube.com/@DrSobiaNoor"
+    youtube: "https://www.youtube.com/@DrSobiaNoor",
+    /* Add a full URL to show a link. Empty ones are hidden. */
+    lablab: "",
+    x: "",
+    instagram: "",
+    facebook: ""
   },
+
+  photo: "assets/sobia.jpg",
+  cv: {
+    pdf: "assets/cv/Sobia-Noor-CV.pdf",
+    pages: ["assets/cv/page-1.jpg", "assets/cv/page-2.jpg", "assets/cv/page-3.jpg"]
+  },
+
+  /* Competitions, hackathons and certificates. Shown on achievements.html.
+     group: "competition" | "certificate"   image/link are optional. */
+  awards: [
+    { group: "competition", title: "CALICO programming contest", issuer: "CALICO", date: "9 Nov 2026",
+      text: "Team contest of data-structures-and-algorithms problems. Solved 2 of 11 problems. Certificate pending.",
+      image: "assets/calico-scoreboard.png", imageAlt: "CALICO scoreboard showing team alpha ranked 499 with two problems solved" },
+    { group: "competition", title: "AI Infra Summit hackathon", issuer: "Lablab.ai", date: "10–16 Sep 2026",
+      text: "Built CrowdSeed AI, a simulation of social versus independent LLM agents designing robots." },
+    { group: "competition", title: "Band of Agents hackathon", issuer: "Lablab.ai", date: "12–19 Jun 2026",
+      text: "Prompt Engineer on Aegis Agent, a multi-agent platform for investment analysis and risk assessment.",
+      image: "assets/certs/band-of-agents-2026.jpg", imageAlt: "Lablab.ai certificate of completion for the Band of Agents hackathon" },
+    { group: "competition", title: "CS50x Puzzle Day", issuer: "Harvard CS50", date: "11 Apr 2026",
+      text: "Solved 10 of 10 puzzles in an online, team-based puzzle event.",
+      image: "assets/certs/cs50x-puzzle-day-2026.jpg", imageAlt: "CS50 certificate for participation in CS50x Puzzle Day 2026",
+      link: "https://cs50.harvard.edu/certificates/0b02cb3e-b383-45a0-b968-0b3b116108a6", linkText: "Verify on cs50.harvard.edu" },
+    { group: "competition", title: "4th Global AI Hackathon", issuer: "Hack-Nation with MIT Sloan AI Club", date: "7–8 Feb 2026",
+      text: "Accepted to take part. Supported by OpenAI.",
+      image: "assets/certs/hack-nation-acceptance.jpg", imageAlt: "Hack-Nation acceptance graphic for the 4th Global AI Hackathon" },
+    { group: "competition", title: "Raise Your Hack", issuer: "Lablab.ai", date: "4–8 Jul 2025",
+      text: "Built Travelry with Llama 3.2, Groq, Snowflake and ElevenLabs. My part: API integration.",
+      image: "assets/certs/raise-your-hack-2025.jpg", imageAlt: "Lablab.ai certificate of completion for Raise Your Hack" },
+
+    { group: "certificate", title: "Aspire Leaders Program", issuer: "Aspire Institute", date: "Sep 2026",
+      text: "40 hours of coursework on critical thinking, communication and social impact.",
+      image: "assets/certs/aspire-leaders-2026.jpg", imageAlt: "Aspire Institute certificate for the 2026 Aspire Leaders Program" },
+    { group: "certificate", title: "Pandas", issuer: "Kaggle", date: "Nov 2024",
+      link: "https://www.kaggle.com/learn/certification/sobianoorai/pandas", linkText: "View certificate" },
+    { group: "certificate", title: "How to Get Into Robotics", issuer: "FutureLearn", date: "Oct 2024",
+      link: "https://www.futurelearn.com/certificates/pac23yh", linkText: "View certificate" },
+    { group: "certificate", title: "Data Science & Analytics", issuer: "HP LIFE", date: "Sep 2024",
+      link: "https://www.life-global.org/certificate/952e5d2a-c6f7-4318-9eb5-eb97101cdb33", linkText: "View certificate" },
+    { group: "certificate", title: "How to Get Into AI", issuer: "FutureLearn", date: "Aug 2024",
+      link: "https://www.futurelearn.com/certificates/6x87538", linkText: "View certificate" },
+    { group: "certificate", title: "Data Seekho webinars and masterclass", issuer: "Data Seekho", date: "Dec 2024 – Jan 2025",
+      text: "LinkedIn masterclass, plus webinars on data analysis, AI, and ChatGPT and transformers." }
+  ],
 
   /* status: "projects" = has projects below, "exploring" = building toward it */
   domains: [
@@ -227,7 +275,7 @@ window.SITE = {
       org: "FutureLearn, HP LIFE, Kaggle",
       text: "Completed certificates in How to Get Into AI, Data Science & Analytics, How to Get Into Robotics and Pandas." },
     { start: "2024-09", when: "Sep 2024 – Sep 2025", type: "work",
-      title: "Data Science Fellow",
+      title: "Data Scientist",
       org: "Data Seekho (remote)",
       text: "Analysed datasets with Python, SQL and PySpark through live projects, built models including IMDb sentiment analysis and K-Means customer clustering, and presented findings to non-technical audiences." },
     { start: "2024-12", when: "Dec 2024 – Jan 2025", type: "milestone",
@@ -242,10 +290,6 @@ window.SITE = {
       title: "IELTS Trainer",
       org: "iCodeGuru",
       text: "Taught IELTS to 50+ underprivileged students through structured lessons and interactive online sessions." },
-    { start: "2025-10", when: "15 Oct 2025", type: "milestone",
-      title: "IELTS Academic (retake)",
-      org: "IELTS",
-      text: "Overall band 7: listening 8.5, reading 6.5, writing 6.0, speaking 6.5." },
     { start: "2026-02", when: "Feb 2026", type: "hackathon",
       title: "Accepted to the 4th Global AI Hackathon",
       org: "Hack-Nation, with MIT Sloan AI Club",
@@ -292,13 +336,14 @@ window.SITE = {
     ["Methods", "Classification, clustering (K-Means, PCA), class-imbalance handling, TF-IDF, foundation-model feature probing"],
     ["LLMs & agents", "Multi-agent systems, prompt engineering, FastAPI, Next.js, WebSockets, Streamlit"],
     ["Data & BI", "SQL, SQLite, Power BI, Excel, DAX, Apache Airflow"],
-    ["Tools", "Git, GitHub, Google Colab, Jupyter, VS Code"]
+    ["Tools", "Git, GitHub, Google Colab, Jupyter, VS Code"],
+    ["Other", "Typing speed 60 WPM"]
   ],
 
   milestones: [
     "Solved 10/10 puzzles at CS50x Puzzle Day (Harvard, 11 Apr 2026)",
     "Completed the 2026 Aspire Leaders Program (40 hours)",
-    "IELTS Academic, 15 Oct 2025: overall band 7 (listening 8.5, reading 6.5, writing 6.0, speaking 6.5)",
+    "IELTS Academic overall band 7 (listening 8.5, reading 6.5, writing 6.0, speaking 6.5)",
     "Multiple international AI hackathons, including Raise Your Hack, Band of Agents and the AI Infra Summit hackathon on Lablab.ai",
     "Certificates: Pandas (Kaggle), Data Science & Analytics (HP LIFE), How to Get Into AI and How to Get Into Robotics (FutureLearn)"
   ]

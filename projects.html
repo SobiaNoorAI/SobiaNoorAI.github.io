@@ -4,38 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | Sobia Noor</title>
-  <meta name="description" content="Projects by Sobia Noor, grouped by research domain: machine learning, computer vision, NLP and LLM agents, cybersecurity, data analytics and more.">
+  <meta name="description" content="Projects by Sobia Noor grouped by research domain: medical imaging, robust machine learning and security, computer vision, NLP and LLM agents, and data science.">
+  <link rel="icon" href="assets/sobia.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="nav">
-    <a class="brand" href="index.html">Sobia Noor</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
-    <nav id="nav-links">
-      <a href="index.html#research">Research</a>
-      <a href="projects.html" aria-current="page">Projects</a>
-      <a href="timeline.html">Timeline</a>
-      <a href="index.html#background">Background</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </header>
-
-  <main>
+<body data-page="projects">
+  <main id="main" class="wrap">
     <section class="page-head">
-      <h1>Projects by research domain</h1>
-      <p class="lead">Each project is filed under the domain it contributes to most. New work is added as I build in more areas.</p>
-      <div id="filters" class="chips" role="group" aria-label="Filter by domain"></div>
+      <h1>Projects</h1>
+      <p class="lead">Each project is filed under the research area it contributes to most. Research projects are built around a question. Studies apply known methods to a public dataset.</p>
+      <div id="filters" class="filters" role="group" aria-label="Filter by domain"></div>
     </section>
-    <div id="project-groups"></div>
-    <section id="exploring-wrap" hidden>
-      <h2>Directions I am building toward</h2>
-      <p class="muted">No finished projects here yet. These are the areas I plan to work in next.</p>
-      <div id="exploring" class="grid"></div>
-    </section>
+    <div id="groups"></div>
   </main>
-
-  <footer><p>© <span id="year"></span> Sobia Noor</p></footer>
-  <noscript><p style="text-align:center">This page needs JavaScript to display projects.</p></noscript>
+  <noscript><p class="wrap">This page needs JavaScript to display projects.</p></noscript>
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>

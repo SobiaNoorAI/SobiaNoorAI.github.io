@@ -1,35 +1,37 @@
-# Sobia Noor: Portfolio
+# Sobia Noor: portfolio
 
-Static site (HTML, CSS, JS). No build step.
+A static site: HTML, CSS and JavaScript. There is no build step.
 
-## Files
+## What is in the folder
 
-- `index.html`: home (research focus, selected projects, recent path, background, contact)
-- `projects.html`: projects grouped by research domain, with filters
-- `timeline.html`: full timeline with filters
-- `data.js`: **all content**. Edit this file to add projects and timeline entries.
-- `style.css`, `script.js`: look and behaviour
+| Path | What it is |
+| --- | --- |
+| `index.html` | Home: introduction, the data-shift demo, research areas, selected work, recent path, background, contact |
+| `projects.html` | All projects, grouped by research domain, with filters |
+| `achievements.html` | Certificates and competitions, with the documents |
+| `timeline.html` | Year-by-year timeline with filters |
+| `cv.html` | CV preview and PDF download |
+| `data.js` | **All the content.** Edit this file to change text, add projects, awards or timeline entries |
+| `script.js`, `style.css` | Behaviour and look |
+| `assets/` | Photo, certificate images, CV pages and the CV PDF |
 
-## Add a project
+## Publish on GitHub Pages
 
-Open `data.js`, copy an object in `projects`, and change `title`, `domain`, `summary`, `tags`, `url`.
-`domain` must match an `id` in `domains` (med, security, cv, nlp, ml, teaching). To add a new domain, add an object to `domains`.
-`kind` is one of research, study, hackathon, workshop, app, learning, teaching. Optional fields: `data` (dataset name), `result`, `limits`, `url`.
-A domain with `status: "exploring"` and no projects shows under "Directions I am building toward".
-Add `featured: true` to show it on the home page.
+1. Open your repository `sobianoorai.github.io` and choose **Add file → Upload files**.
+2. Drag in every file and the `assets` folder from this folder, then commit.
+3. Open **Settings → Pages**. Under Source choose **Deploy from a branch**, then branch `main` and folder `/ (root)`.
+4. Your site opens at `https://sobianoorai.github.io` within a few minutes.
 
-## Add a timeline entry
+## Common edits (all in `data.js`)
 
-Copy an object in `timeline`. `start` is `"YYYY-MM"` (used for sorting). `when` is the label shown.
+- **Add a project:** copy an object inside `projects`, change its fields. `domain` must match an `id` in `domains`. `kind` is one of research, study, hackathon, workshop, app, learning, teaching, prototype. Optional fields: `data`, `result`, `note`, `url`, `featured: true` (shows it on the home page).
+- **Add a new research domain:** add an object to `domains`. It appears as soon as a project uses its `id`.
+- **Add a timeline entry:** copy an object inside `timeline`. `start` is `"YYYY-MM"` and is used for sorting. `when` is the text people see.
+- **Add a certificate or competition:** copy an object inside `awards`. Put the image in `assets/certs/` and set `image`. Use `group: "competition"` or `"certificate"`.
+- **Show other accounts:** fill in `links` (`lablab`, `x`, `instagram`, `facebook`). Empty entries stay hidden.
+- **Replace the CV:** put the new PDF at `assets/cv/Sobia-Noor-CV.pdf` and new page images at `assets/cv/page-1.jpg`, `page-2.jpg`, and so on. Update `cv.pages` if the page count changes.
+- **Replace the photo:** overwrite `assets/sobia.jpg` with a square image.
 
-## Deploy on GitHub Pages
+## Fonts
 
-1. Create a **public** repo named `<your-github-username>.github.io`.
-2. Upload every file in this folder.
-3. Settings → Pages → Deploy from a branch → `main` / root.
-4. The site goes live at `https://<your-github-username>.github.io` within a minute or two.
-
-## Custom domain (for example sobianoor.com)
-
-Buy the domain from a registrar, add a `CNAME` file containing the domain to the repo root, set the DNS records GitHub lists
-under Settings → Pages, and tick "Enforce HTTPS".
+The site loads Bricolage Grotesque and Source Serif 4 from Google Fonts. If they cannot load, it falls back to system fonts.
