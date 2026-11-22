@@ -78,6 +78,7 @@
       el("h3", { text: t.title }),
       el("p", { class: "org", text: t.org }),
       el("p", { class: "text", text: t.text }),
+      t.image ? el("img", { class: "proof", src: t.image, alt: t.imageAlt || "", loading: "lazy" }) : null,
       el("span", { class: "type", text: TYPE_LABEL[t.type] || t.type })
     ]);
   }

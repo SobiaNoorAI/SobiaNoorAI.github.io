@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobia Noor | Machine Learning &amp; Computer Science</title>
+  <meta name="description" content="Sobia Noor works on reliable machine learning under distribution shift, with a focus on medical imaging, and related work in cybersecurity, computer vision and NLP. Applying to PhD programs in Computer Science.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Sobia Noor</a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="nav-links">
+      <a href="index.html#research" >Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="index.html#background">Background</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Computer Science · Applying to PhD programs</p>
+      <h1>Sobia Noor</h1>
+      <p class="lead">I work on making machine learning reliable when the data changes, for example when a model trained at one hospital is used at another. My main application area is medical imaging, with related work in cybersecurity, computer vision and NLP. I am a software engineer and educator based in Lahore, Pakistan.</p>
+      <div class="cta">
+        <a class="btn primary" href="projects.html">Browse projects by domain</a>
+        <a class="btn" href="timeline.html">See my path</a>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research focus</h2>
+      <p class="muted">My guiding question is how to build machine learning models that stay trustworthy under distribution shift: a new hospital, a new network or a new data source. Medical imaging is my primary application area. Projects labelled <em>Research project</em> are built around a specific research question. Others are applied studies on public datasets.</p>
+      <div id="domain-grid" class="grid"></div>
+    </section>
+
+    <section id="featured">
+      <h2>Selected projects</h2>
+      <div id="featured-grid" class="grid"></div>
+      <p><a href="projects.html">All projects, grouped by research domain →</a></p>
+    </section>
+
+    <section id="path">
+      <h2>Recent path</h2>
+      <div id="recent-timeline" class="timeline"></div>
+      <p><a href="timeline.html">Full timeline →</a></p>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <h3>Education</h3>
+      <p>Bachelor of Information Technology, Institute of Southern Punjab, Multan (2018 – 2022), CGPA 3.21 / 4.00.</p>
+      <h3>Experience</h3>
+      <p>Data Scientist at Data Seekho (2024 – 2025). Trainer at iCodeGuru in IELTS, web development and data structures and algorithms (2025 – present), mentoring 100+ students.</p>
+      <h3>Skills</h3>
+      <dl id="skills" class="skills"></dl>
+      <h3>Achievements</h3>
+      <ul id="milestones" class="list"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>I am glad to talk about research collaborations, graduate programs and projects.</p>
+      <p class="cta">
+        <a class="btn primary" id="email-link" href="#">Email me</a>
+        <a class="btn" id="link-github" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" id="link-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" id="link-youtube" target="_blank" rel="noopener">YouTube</a>
+      </p>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> Sobia Noor</p></footer>
+  <noscript><p style="text-align:center">This site needs JavaScript to display projects and the timeline.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -281,7 +281,9 @@ window.SITE = {
     { start: "2026-11", when: "9 Nov 2026", type: "competition",
       title: "CALICO programming contest",
       org: "CALICO",
-      text: "Competed in an online contest of data-structures-and-algorithms problems and solved 2 of 11 problems." }
+      text: "Competed as a team in an online contest of data-structures-and-algorithms problems and solved 2 of 11 problems. Scoreboard shown below. Certificate pending.",
+      image: "assets/calico-scoreboard.png",
+      imageAlt: "CALICO scoreboard row for team alpha showing rank 499, two problems solved" }
   ],
 
   skills: [
@@ -297,7 +299,7 @@ window.SITE = {
     "Solved 10/10 puzzles at CS50x Puzzle Day (Harvard, 11 Apr 2026)",
     "Completed the 2026 Aspire Leaders Program (40 hours)",
     "IELTS Academic, 15 Oct 2025: overall band 7 (listening 8.5, reading 6.5, writing 6.0, speaking 6.5)",
-    "Six international AI hackathons, including Raise Your Hack, Band of Agents and the AI Infra Summit hackathon on Lablab.ai",
+    "Multiple international AI hackathons, including Raise Your Hack, Band of Agents and the AI Infra Summit hackathon on Lablab.ai",
     "Certificates: Pandas (Kaggle), Data Science & Analytics (HP LIFE), How to Get Into AI and How to Get Into Robotics (FutureLearn)"
   ]
 };

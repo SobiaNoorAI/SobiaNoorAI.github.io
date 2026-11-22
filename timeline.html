@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timeline | Sobia Noor</title>
+  <meta name="description" content="Timeline of Sobia Noor's education, work, teaching, hackathons and workshops.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html">Sobia Noor</a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="nav-links">
+      <a href="index.html#research">Research</a>
+      <a href="projects.html">Projects</a>
+      <a href="timeline.html" aria-current="page">Timeline</a>
+      <a href="index.html#background">Background</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <h1>My path</h1>
+      <p class="lead">Education, work, teaching, hackathons and workshops in one place.</p>
+      <div id="type-filters" class="chips" role="group" aria-label="Filter by type"></div>
+      <button id="order-btn" class="btn small" type="button">Showing oldest first. Switch to newest first</button>
+    </section>
+    <div id="full-timeline" class="timeline"></div>
+  </main>
+
+  <footer><p>© <span id="year"></span> Sobia Noor</p></footer>
+  <noscript><p style="text-align:center">This page needs JavaScript to display the timeline.</p></noscript>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
